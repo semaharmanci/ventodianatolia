@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (hero) {
     if (window.location.pathname.includes('index.html') || window.location.pathname === '/') {
       slides = [
-        'url(../img/arka1.jpeg)',
-        'url(../img/arka2.jpeg)',
-        'url(../img/arka3.jpeg)'
+        'url(/img/arka1.jpeg)',
+        'url(/img/arka2.jpeg)',
+        'url(/img/arka3.jpeg)'
       ];
     } else if (window.location.pathname.includes('menu.html')) {
       slides = [
