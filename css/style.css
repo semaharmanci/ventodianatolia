@@ -80,31 +80,31 @@ header {
 
 @keyframes backgroundSlideHome {
   0% {
-    background-image: url('/ventodianatolia/img/arka1.jpeg');
+    background-image: url('../img/arka1.jpeg');
   }
   33% {
-    background-image: url('/ventodianatolia/img/arka2.jpeg');
+    background-image: url('../img/arka2.jpeg');
   }
   66% {
-    background-image: url('/ventodianatolia/img/arka3.jpeg');
+    background-image: url('../img/arka3.jpeg');
   }
   100% {
-    background-image: url('/ventodianatolia/img/arka1.jpeg');
+    background-image: url('../img/arka1.jpeg');
   }
 }
 
 @keyframes backgroundSlideMenu {
   0% {
-    background-image: url('/ventodianatolia/img/menu1.jpeg');
+    background-image: url('../img/menu1.jpeg');
   }
   33% {
-    background-image: url('/ventodianatolia/img/menu2.jpeg');
+    background-image: url('../img/menu2.jpeg');
   }
   66% {
-    background-image: url('/ventodianatolia/img/menu3.jpeg');
+    background-image: url('../img/menu3.jpeg');
   }
   100% {
-    background-image: url('/ventodianatolia/img/menu1.jpeg');
+    background-image: url('../img/menu1.jpeg');
   }
 }
 
