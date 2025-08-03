@@ -71,16 +71,43 @@ header {
 }
 
 /* HERO */
-.hero {
-  background-size: cover;
-  background-position: center center;
-  height: 70vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-image 1s ease-in-out;
+.page-home .hero {
+  animation: backgroundSlideHome 18s infinite;
 }
+.page-menu .hero {
+  animation: backgroundSlideMenu 15s infinite;
+}
+
+@keyframes backgroundSlideHome {
+  0% {
+    background-image: url('/ventodianatolia/img/arka1.jpeg');
+  }
+  33% {
+    background-image: url('/ventodianatolia/img/arka2.jpeg');
+  }
+  66% {
+    background-image: url('/ventodianatolia/img/arka3.jpeg');
+  }
+  100% {
+    background-image: url('/ventodianatolia/img/arka1.jpeg');
+  }
+}
+
+@keyframes backgroundSlideMenu {
+  0% {
+    background-image: url('/ventodianatolia/img/menu1.jpeg');
+  }
+  33% {
+    background-image: url('/ventodianatolia/img/menu2.jpeg');
+  }
+  66% {
+    background-image: url('/ventodianatolia/img/menu3.jpeg');
+  }
+  100% {
+    background-image: url('/ventodianatolia/img/menu1.jpeg');
+  }
+}
+
 
 .overlay {
   display: flex;
