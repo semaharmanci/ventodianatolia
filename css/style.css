@@ -71,43 +71,16 @@ header {
 }
 
 /* HERO */
-.page-home .hero {
-  animation: backgroundSlideHome 18s infinite;
+.hero {
+  background-size: cover;
+  background-position: center center;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-image 1s ease-in-out;
 }
-.page-menu .hero {
-  animation: backgroundSlideMenu 15s infinite;
-}
-
-@keyframes backgroundSlideHome {
-  0% {
-    background-image: url('../img/arka1.jpeg');
-  }
-  33% {
-    background-image: url('../img/arka2.jpeg');
-  }
-  66% {
-    background-image: url('../img/arka3.jpeg');
-  }
-  100% {
-    background-image: url('../img/arka1.jpeg');
-  }
-}
-
-@keyframes backgroundSlideMenu {
-  0% {
-    background-image: url('../img/menu1.jpeg');
-  }
-  33% {
-    background-image: url('../img/menu2.jpeg');
-  }
-  66% {
-    background-image: url('../img/menu3.jpeg');
-  }
-  100% {
-    background-image: url('../img/menu1.jpeg');
-  }
-}
-
 
 .overlay {
   display: flex;
@@ -604,4 +577,4 @@ footer {
     font-size: 15px;
     line-height: 1.6;
   }
-} 
+}
