@@ -11,16 +11,16 @@
     window.location.pathname === '/ventodianatolia/' || 
     window.location.pathname === '/ventodianatolia') {
   slides = [
-    'url(/ventodianatolia/img/arka1.jpeg)',
-    'url(/ventodianatolia/img/arka2.jpeg)',
-    'url(/ventodianatolia/img/arka3.jpeg)'
-  ];
+  'url(img/arka1.jpeg)',
+  'url(img/arka2.jpeg)',
+  'url(img/arka3.jpeg)'
+];
 } else if (window.location.pathname.includes('menu.html')) {
   slides = [
-    'url(/ventodianatolia/img/yemek3.jpeg)',
-    'url(/ventodianatolia/img/yemek4.jpeg)',
-    'url(/ventodianatolia/img/yemek6.jpeg)'
-  ];
+  'url(img/yemek3.jpeg)',
+  'url(img/yemek4.jpeg)',
+  'url(img/yemek6.jpeg)'
+];
   // ...
 }
     if (slides.length > 0) {
