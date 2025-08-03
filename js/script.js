@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
       ];
     } else if (window.location.pathname.includes('menu.html')) {
       slides = [
-        'url(img/yemek3.jpg)',
-        'url(img/yemek4.jpg)',
-        'url(img/yemek6.jpg)'
+        'url(img/yemek3.jpeg)',
+        'url(img/yemek4.jpeg)',
+        'url(img/yemek6.jpeg)'
       ];
       // Menü sayfasında arka plan karartması
       hero.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
