@@ -1,0 +1,580 @@
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100vh;
+  background-color: #000;
+  color: #999; /* Gri ton */
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #999; /* Gri ton */
+}
+
+a:hover {
+  color: #ccc; /* Açık gri hover */
+}
+
+.page-wrapper {
+  padding-top: 160px;  /* header yüksekliği kadar boşluk */
+  padding-bottom: 60px; /* footer için boşluk */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #000;
+  padding: 10px 20px;
+  box-shadow: 0 2px 8px rgba(153, 153, 153, 0.2);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 140px;
+  object-fit: contain;
+}
+
+/* NAV MENU */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-menu a {
+  font-weight: 600;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+/* HERO */
+.hero {
+  background-size: cover;
+  background-position: center center;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-image 1s ease-in-out;
+}
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.474);
+  text-align: center;
+  padding: 0 20px;
+}
+
+.overlay h2 {
+  font-size: 48px;
+  color: #BE9970; /* Altın tonu */
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.overlay p {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 400;
+  color: #999;
+}
+
+/* TEAM SECTION */
+.team-section {
+  max-width: 1100px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 0 20px;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  justify-content: center;  /* Eklendi: yatayda ortalama */
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.team-member.left {
+  flex-direction: row;
+}
+
+.team-member.right {
+  flex-direction: row-reverse;
+}
+
+.photo-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #BE9970;
+  filter: brightness(0.6);
+  transition: filter 0.3s ease, border-color 0.3s ease;
+  flex-shrink: 0;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(190, 153, 112, 0.2);
+}
+
+.photo-wrapper:hover {
+  filter: brightness(1);
+  border-color: #c9b037;
+}
+
+.photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.name-title {
+  position: relative; /* Eskiden absolute idi */
+  margin-top: 10px;
+  text-align: center;
+  color: #BE9970;
+  font-weight: 600;
+  text-shadow: 0 0 5px rgba(0,0,0,0.7);
+}
+
+.name-title h3 {
+  margin-bottom: 3px;
+  font-size: 1.25rem;
+}
+
+.name-title p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.text-wrapper {
+  max-width: 650px;
+}
+
+.name-gold {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #BE9970;
+  margin-bottom: 5px;
+}
+
+.title-gold {
+  font-size: 1.1rem;
+  color: #BE9970;
+  margin-bottom: 15px;
+}
+
+.bio-grey {
+  font-size: 1.1rem;
+  color: #999;
+  line-height: 1.6;
+}
+
+.description {
+  max-width: 650px;
+  color: #999;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.custom-separator {
+  height: 1px;
+  background-color: #BE9970;
+  margin: 5px 0;
+  opacity: 0.4;
+}
+
+.menu-section {
+  margin: 40px auto;
+  max-width: 900px;
+  padding: 0 20px;
+  color: #ccc;
+}
+
+.menu-section h2 {
+  color: #BE9970;
+  font-size: 28px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #BE9970;
+  padding-bottom: 5px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dashed #444;
+  font-size: 16px;
+}
+
+.menu-item span:last-child {
+  color: #BE9970;
+  font-weight: 600;
+}
+
+/* FOOTER */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #111214;
+  color: #999;
+  padding: 10px 20px;
+  text-align: center;
+  box-shadow: 0 -2px 8px rgba(153, 153, 153, 0.2);
+}
+
+.footer-simple p {
+  margin: 5px 0;
+  color: #999;
+}
+
+.footer-contact {
+  font-size: 15.5px; /* Biraz büyük */
+  margin-bottom: 10px; /* Üstteki p ile mesafe */
+}
+
+.footer-copy {
+  font-size: 14px;
+  color: #999;
+}
+
+.footer-simple a {
+  color: #999;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-simple a:hover {
+  color: #ccc;
+}
+
+.footer-simple i {
+  margin-right: 5px;
+  color: #BE9970; /* Altın rengi simgeler */
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .slide {
+  position: absolute;
+  top: 0; left: 100%; /* Başlangıçta sağda gizli */
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: left 1s ease-in-out;
+  z-index: 0;
+}
+
+.hero .slide.active {
+  left: 0;
+  z-index: 1;
+}
+
+.hero .slide.previous {
+  left: -100%;
+  z-index: 0;
+}
+
+/* ZEIT (Öffnungszeiten) Sayfası İçin Özel Stil */
+.zeit-opening {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 40px 30px;
+  border-radius: 16px;
+  max-width: 800px;
+  margin: 60px auto;
+  box-shadow: 0 4px 20px rgba(190, 153, 112, 0.3);
+  color: #ccc;
+  text-align: center;
+}
+
+.zeit-opening h2 {
+  font-size: 36px;
+  color: #BE9970;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.zeit-opening ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.zeit-opening ul li {
+  font-size: 18px;
+  margin-bottom: 12px;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  color: #e0e0e0;
+}
+
+.zeit-opening p {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-top: 20px;
+  color: #bbb;
+}
+
+.zeit-opening p strong {
+  color: #fff;
+}
+
+.pdf-button-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px; /* biraz nefes alması için */
+}
+.pdf-button {
+  padding: 14px 36px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  background-color: #BE9970; /* Altın ton */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(190,153,112,0.6);
+  transition: background-color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.pdf-button:hover {
+  background-color: #c1c0ba;
+}
+
+/* Modal Genel */
+.pdf-modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 3000;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Modal aktifken */
+.pdf-modal.active {
+  display: flex;
+}
+
+/* Modal içerik */
+.pdf-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  height: 90%;
+  background-color: #111;
+  border-radius: 14px;
+  box-shadow: 0 0 30px #BE9970;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Kapatma butonu */
+.pdf-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 38px;
+  font-weight: 900;
+  color: #BE9970;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.pdf-close:hover {
+  color: #c9b037;
+}
+
+/* PDF iframe */
+.pdf-modal-content iframe {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #000;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive küçük ekran */
+@media (max-width: 600px) {
+  .pdf-button {
+    font-size: 18px;
+    padding: 12px 28px;
+  }
+}
+/* Hamburger butonu başlangıçta gizli */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 28px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1100; /* header üstünde */
+}
+
+.nav-toggle .bar {
+  width: 100%;
+  height: 3px;
+  background-color: #BE9970; /* altın ton */
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger hover efekti */
+.nav-toggle:hover .bar {
+  background-color: #c9b037;
+}
+
+/* Nav menü normalde flex ve yatay */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  /* Hamburger görünür */
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* Menü gizli ve sağda, tam yükseklik, üstte değil */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* görünmeyen sağda */
+    width: 250px;
+    height: 100vh;
+    background-color: #000;
+    padding-top: 160px; /* header yüksekliği kadar boşluk */
+    box-shadow: -4px 0 8px rgba(190, 153, 112, 0.4);
+    transition: right 0.3s ease;
+    z-index: 1050;
+  }
+
+  /* Menü açıkken sağda görünür */
+  .nav-menu.open {
+    right: 0;
+  }
+
+  /* Menü içindeki ul dikey */
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 25px;
+    padding-left: 20px;
+  }
+
+  /* Menü linkleri biraz daha büyük */
+  .nav-menu a {
+    font-size: 20px;
+  }
+} 
+.nav-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .header-container {
+    
+    gap: 10px;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .team-member {
+    flex-direction: column !important;
+    text-align: center;
+    justify-content: center; /* Eklendi */
+    align-items: center;     /* Eklendi */
+  }
+
+  .photo-wrapper {
+    margin-bottom: 15px;
+  }
+
+  .name-title {
+    position: static;
+    transform: none;
+  }
+
+  .description,
+  .text-wrapper {
+    max-width: 100%;
+  }
+
+  .footer-contact {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+} 
