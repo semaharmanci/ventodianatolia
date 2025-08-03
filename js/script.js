@@ -6,23 +6,23 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Arka plan slaytları ---
   let slides = [];
   if (hero) {
-    if (window.location.pathname.includes('index.html') || window.location.pathname === '/') {
-      slides = [
-        'url(/ventodianatolia/img/arka1.jpeg)',
-        'url(/ventodianatolia/img/arka2.jpeg)',
-        'url(/ventodianatolia/img/arka3.jpeg)'
-      ];
-    } else if (window.location.pathname.includes('menu.html')) {
-      slides = [
-        'url(/ventodianatolia/img/yemek3.jpeg)',
-        'url(/ventodianatolia/img/yemek4.jpeg)',
-        'url(/ventodianatolia/img/yemek6.jpeg)'
-      ];
-      // Menü sayfasında arka plan karartması
-      hero.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
-      hero.style.backgroundBlendMode = 'darken';
-    }
-
+    if (window.location.pathname.includes('index.html') || 
+    window.location.pathname === '/' || 
+    window.location.pathname === '/ventodianatolia/' || 
+    window.location.pathname === '/ventodianatolia') {
+  slides = [
+    'url(/ventodianatolia/img/arka1.jpeg)',
+    'url(/ventodianatolia/img/arka2.jpeg)',
+    'url(/ventodianatolia/img/arka3.jpeg)'
+  ];
+} else if (window.location.pathname.includes('menu.html')) {
+  slides = [
+    'url(/ventodianatolia/img/yemek3.jpeg)',
+    'url(/ventodianatolia/img/yemek4.jpeg)',
+    'url(/ventodianatolia/img/yemek6.jpeg)'
+  ];
+  // ...
+}
     if (slides.length > 0) {
       let currentIndex = 0;
       hero.style.backgroundImage = slides[currentIndex];
