@@ -8,15 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
   if (hero) {
     if (window.location.pathname.includes('index.html') || window.location.pathname === '/') {
       slides = [
-        'url(/img/arka1.jpeg)',
-        'url(/img/arka2.jpeg)',
-        'url(/img/arka3.jpeg)'
+        'url(/ventodianatolia/img/arka1.jpeg)',
+        'url(/ventodianatolia/img/arka2.jpeg)',
+        'url(/ventodianatolia/img/arka3.jpeg)'
       ];
     } else if (window.location.pathname.includes('menu.html')) {
       slides = [
-        'url(/img/yemek3.jpeg)',
-        'url(/img/yemek4.jpeg)',
-        'url(/img/yemek6.jpeg)'
+        'url(/ventodianatolia/img/yemek3.jpeg)',
+        'url(/ventodianatolia/img/yemek4.jpeg)',
+        'url(/ventodianatolia/img/yemek6.jpeg)'
       ];
       // Menü sayfasında arka plan karartması
       hero.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
