@@ -593,12 +593,13 @@ footer {
 .content-section a:hover {
   color: #fff;
 }
+
+
 /* Responsive */
 
 /* Tablet */
 @media (max-width: 768px) {
   .header-container {
-    
     gap: 10px;
   }
 
@@ -628,7 +629,14 @@ footer {
   .text-wrapper {
     max-width: 100%;
   }
-
+  .footer-links {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
   .footer-contact {
     font-size: 15px;
     line-height: 1.6;
