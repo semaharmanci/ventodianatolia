@@ -1,4 +1,4 @@
- document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const hero = document.querySelector('.hero');
   const navToggle = document.querySelector('.nav-toggle');
   const navMenu = document.querySelector('.nav-menu');
@@ -6,23 +6,23 @@
   // --- Arka plan slaytları ---
   let slides = [];
   if (hero) {
-    if (window.location.pathname.includes('index.html') || 
-    window.location.pathname === '/' || 
-    window.location.pathname === '/ventodianatolia/' || 
-    window.location.pathname === '/ventodianatolia') {
-  slides = [
-  'url(img/arka1.jpeg)',
-  'url(img/arka2.jpeg)',
-  'url(img/arka3.jpeg)'
-];
-} else if (window.location.pathname.includes('menu.html')) {
-  slides = [
-  'url(img/yemek3.jpeg)',
-  'url(img/yemek4.jpeg)',
-  'url(img/yemek6.jpeg)'
-];
-  // ...
-}
+    if (window.location.pathname.includes('index.html') || window.location.pathname === '/') {
+      slides = [
+        'url(img/arka1.jpeg)',
+        'url(img/arka2.jpeg)',
+        'url(img/arka3.jpeg)'
+      ];
+    } else if (window.location.pathname.includes('menu.html')) {
+      slides = [
+        'url(img/yemek3.jpeg)',
+        'url(img/yemek4.jpeg)',
+        'url(img/yemek6.jpeg)'
+      ];
+      // Menü sayfasında arka plan karartması
+      hero.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
+      hero.style.backgroundBlendMode = 'darken';
+    }
+
     if (slides.length > 0) {
       let currentIndex = 0;
       hero.style.backgroundImage = slides[currentIndex];
@@ -52,7 +52,12 @@
       navToggle.classList.toggle('active');
     });
   }
-    if (!localStorage.getItem("cookiesChoice")) {
+  const popup = document.getElementById("cookiePopup");
+  const acceptBtn = document.getElementById("acceptCookies");
+  const rejectBtn = document.getElementById("rejectCookies");
+
+  // Eğer daha önce karar verilmemişse popup göster
+  if (!localStorage.getItem("cookiesChoice")) {
     popup.style.display = "block";
   }
 
