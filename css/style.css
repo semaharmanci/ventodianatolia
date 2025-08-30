@@ -642,3 +642,63 @@ footer {
     line-height: 1.6;
   }
 }  
+/* Cookie Popup */
+.cookie-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #111214;
+  color: #ccc;
+  border: 2px solid #BE9970;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(190,153,112,0.3);
+  padding: 20px;
+  max-width: 320px;
+  z-index: 5000;
+  display: none; /* Başlangıçta gizli */
+}
+
+.cookie-content h3 {
+  color: #BE9970;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.cookie-content p {
+  font-size: 15px;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.cookie-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+#acceptCookies {
+  background: #BE9970;
+  color: #000;
+}
+
+#acceptCookies:hover {
+  background: #c1c0ba;
+}
+
+#rejectCookies {
+  background: #333;
+  color: #ccc;
+}
+
+#rejectCookies:hover {
+  background: #555;
+}
