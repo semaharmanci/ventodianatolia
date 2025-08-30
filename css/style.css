@@ -536,7 +536,63 @@ footer {
 .nav-toggle.active .bar:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
+/* Footer Links: Datenschutz & Impressum */
+.footer-links {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
 
+.footer-links a {
+  color: #BE9970; /* Altın ton, öne çıkar */
+  font-weight: 600;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #c1c0ba;; /* Açık altın hover */
+  text-decoration: underline;
+}
+/* Datenschutzerklärung Main Stili */
+.content-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  color: #ccc;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+.content-section h1 {
+  color: #BE9970;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.content-section h2 {
+  color: #BE9970;
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  padding-bottom: 6px;
+}
+
+.content-section p {
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.content-section a {
+  color: #BE9970;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.content-section a:hover {
+  color: #fff;
+}
 /* Responsive */
 
 /* Tablet */
