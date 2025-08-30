@@ -52,4 +52,17 @@
       navToggle.classList.toggle('active');
     });
   }
+    if (!localStorage.getItem("cookiesChoice")) {
+    popup.style.display = "block";
+  }
+
+  acceptBtn.addEventListener("click", () => {
+    localStorage.setItem("cookiesChoice", "accepted");
+    popup.style.display = "none";
+  });
+
+  rejectBtn.addEventListener("click", () => {
+    localStorage.setItem("cookiesChoice", "rejected");
+    popup.style.display = "none";
+  });
 });
